@@ -1,0 +1,13 @@
+<h1>{{news.title}}</h1>
+<div class="inner-news">
+  <div>
+    <small>
+      {{news.date}}
+    </small>
+  </div>
+  <div>
+    {{news.stxt}}
+  </div>
+</div>
+<a ui-sref=".comments"  class="btn btn-success">Show Comments List</a>
+<div ui-view></div>

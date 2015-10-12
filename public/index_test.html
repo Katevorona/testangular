@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>AngularJS First Application</title>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+
+</head>
+<body>
+	<div  ng-app="my-app">
+		<div class="content">
+			<div ng-view></div>
+		</div>
+	</div>
+	<!--<div ng-controller="MyController">-->
+	<!--<input type="text" ng-model="person.name" placeholder="Enter a name here">-->
+	<!--<h3>Hello, {{ person.name }}!</h3>-->
+	<!--</div>-->
+	<!-- <div ng-controller="ParentController">
+	<div ng-controller="ChildController">
+	<input type="text" ng-model="person.name" placeholder="Name"/>
+	<a ng-click="sayHello()">Say hello</a>
+</div>
+{{ person }}
+</div>
+
+<div ng-controller="MyController">
+<h5>{{ clock }}</h5>
+</div> -->
+
+<!-- <div ng-controller="RepeatController">
+<ul>
+<li ng-repeat="pers in roommates">{{pers.name}}</li>
+</ul>
+<ul>
+<li ng-repeat="(name, color) in people">{{name}}:{{color}}</li>
+</ul>
+</div> -->
+
+<!-- <div ng-controller="ServiceController">
+<label for="username">Type in a GitHub username</label>
+<input type="text" ng-model="username" placeholder="Enter a GitHub username, like auser" />
+<pre ng-show="username">{{ events }}</pre>
+</div> -->
+
+
+
+<script src="/public/src/src.js"></script>
+</body>
+</html>

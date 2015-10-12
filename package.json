@@ -1,0 +1,38 @@
+{
+  "name": "testangular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bower": "^1.5.3",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-serve": "^1.2.0",
+    "http-server": "^0.8.5",
+    "httpster": "^1.0.1",
+    "nodemon": "^1.7.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "angular-ui-router": "^0.2.15",
+    "gulp": "^3.9.0",
+    "gulp-server": "^0.1.0",
+    "gulp-webserver": "^0.9.1",
+    "opn": "^3.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Katevorona/testangular.git"
+  },
+  "author": "katevorona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Katevorona/testangular/issues"
+  },
+  "homepage": "https://github.com/Katevorona/testangular#readme"
+}

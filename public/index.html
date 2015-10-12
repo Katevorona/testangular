@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>AngularJS First Application</title>
+	<link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="public\src\css\main.css" media="screen" title="no title" charset="utf-8">
+
+</head>
+<body>
+	<div class="container" ng-app="my-app">
+		<div class="row" ng-controller='newsController'>
+			<div class="col-md-4">
+				<h3>News List</h3>
+				<ul>
+					<li ng-repeat="oneNews in news">
+						<a ui-sref="news-inner({ newsId: oneNews.id })">
+								{{oneNews.title}}
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-7">
+				<div ui-view></div>
+			</div>
+		</div>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+	<script src="node_modules\angular-ui-router\release\angular-ui-router.js"></script>
+	<script src="bower_components\jquery\dist\jquery.min.js"></script>
+	<script src="bower_components\bootstrap\dist\js\bootstrap.js"></script>
+	<script src="/public/src/src.js"></script>
+</body>
+</html>
