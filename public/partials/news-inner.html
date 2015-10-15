@@ -9,5 +9,14 @@
     {{news.stxt}}
   </div>
 </div>
-<a ui-sref=".comments"  class="btn btn-success">Show Comments List</a>
-<div ui-view></div>
+<div data-ng-show="comments.length">
+  <span class="fa fa-plus" ng-click="addComment()" title="add your comment"></span>
+  <div class="comments-list">
+    <div class="comment-item" ng-repeat="comment in comments">
+      <div>{{comment.name}}</div>
+      <small>{{comment.datetime}}</small>
+      <div>{{comment.txt}}</div>
+    </div>
+  </div>
+</div>
+<a data-ng-click="showComments()" ng-hide="comments.length" class="btn btn-success">Show Comments List</a>

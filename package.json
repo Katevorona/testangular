@@ -17,6 +17,7 @@
   "devDependencies": {
     "angular-ui-router": "^0.2.15",
     "gulp": "^3.9.0",
+    "gulp-inject": "^3.0.0",
     "gulp-server": "^0.1.0",
     "gulp-webserver": "^0.9.1",
     "opn": "^3.0.2"

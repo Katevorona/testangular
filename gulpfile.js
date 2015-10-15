@@ -3,6 +3,8 @@ var serve = require('gulp-serve');
 var nodemon = require('gulp-nodemon');
 var webserver = require('gulp-webserver');
 var opn       = require('opn');
+var inject = require('gulp-inject');
+
 
 gulp.task('serve', serve('public'));
 gulp.task('serve-build', serve(['public', 'build']));
@@ -47,5 +49,14 @@ gulp.task('openbrowser', function() {
   opn( 'http://' + server.host + ':' + server.port );
 });
 
+gulp.task('index', function () {
+  var target = gulp.src('./public/index.html');
+  // It's not necessary to read the files (will speed up things), we're only after their paths:
+  var sources = gulp.src(['./public/src/**/**/*.module.js', './public/src/**/**/*.factory.js', './public/src/**/**/*.js'], {read: false});
+
+  return target.pipe(inject(sources))
+    .pipe(gulp.dest('./public'));
+});
+
 gulp.task('start-serve', ['webserver', 'openbrowser']);
-gulp.task('start-server', ['start', 'openbrowser']);
+gulp.task('start-server', ['start', 'index', 'openbrowser']);
